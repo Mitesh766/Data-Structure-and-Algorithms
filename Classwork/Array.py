@@ -22,7 +22,7 @@ class myArray:
         self.__size=2*self.__size
         
     def append(self,value):
-        if(self.size < self.size):
+        if(self.size < self.capacity):
             self.__data[self.__size]=value
             self.__size+=1
         else:

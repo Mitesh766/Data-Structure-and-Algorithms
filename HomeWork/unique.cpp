@@ -20,7 +20,7 @@ int main()
     }
     // for(int i=0;i<257;i++){
     //     if(arr[i]>0){
-    //     cout << char(i)<< " =====>" << arr[i]  << endl;
+    //     cout << char(i)<<     " =====>" << arr[i]  << endl;
     //     }
     // }
     return 0;

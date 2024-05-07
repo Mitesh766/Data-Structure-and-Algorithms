@@ -12,8 +12,7 @@ int main(){
         }
         else{
             str2+=str[i];
-        }
-       
+        } 
     }
     
     cout << str2;

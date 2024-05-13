@@ -3,6 +3,7 @@ class Node:
         self.data = data
         self.next = next
         self.previous = previous
+        
 
     # By defalt this will be called , while printing object name
     def __str__(self):
@@ -14,6 +15,7 @@ class DLL:
         self.__head = None
         self.__tail = None
         self.__size = 0
+        self.__trav=None;
 
     def size(self):
         return self.__size
@@ -70,6 +72,16 @@ class DLL:
             newNode.next.prev=newNode
         self.__size+=1
         
+    def __iter__(self):
+        self.__trav=self.__head
+        return self
+    
+    def __next__(self):
+        x=self.__trav.data
+        if(self.__trav.next is None):
+            raise Exception("Index out of bound")
+        self.__trav=self.__trav.next
+        
         
 # delete first
 #delete last
@@ -86,5 +98,9 @@ l1.append(4)
 l1.append(6)
 l1.addFirst(8)
 l1.addAt(2,5)
-print(l1)
-print(l1.size())
+
+for x in l1:
+    print(x)
+
+# print(l1)
+# print(l1.size())
